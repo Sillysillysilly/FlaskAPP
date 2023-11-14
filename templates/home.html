@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>BCI CLUB</title>
+        <style>
+            /* h1 {
+                font-size: 60px;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            h2{
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 40px;
+                color: rgb(50, 50, 50);
+                text-align: center;
+                font-weight: bold;
+            }
+            .bodytext{
+                font-family: 'Times New Roman', Times, serif;
+                color: black;
+
+            }
+            #container{
+                max-width: 1000px;
+                margin: 0 auto 0 auto;
+            } */
+            #banner{
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <h1 class="text-center mt-4 mb-4">{{school}} BCI LAB</h1>
+        <img class="img-fluid" id="banner" src="../static/image/banner.jpg" alt="banner" height="320">
+        <br>
+        <h2 class="text-center mt-4 mb-4">About BCI LAB</h2>
+        <p class="lead">
+            加入光荣的进化吧！
+        </p>
+        <h2 class="text-center mt-4 mb-4">functions</h2>
+        <div>
+            {% for student in students %}
+                {% include 'student.html' %}
+            {% endfor %}
+        </div>
+        
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023,Young</p>
+    </div>
+    </body>
+</html>
