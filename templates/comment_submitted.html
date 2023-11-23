@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comment Submitted</title>
+        {% include 'bootstrap.html' %}
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        {% include 'banner.html' %}
+        <div class="container">
+            <h1 class="text-center mt-4 mb-4">{{school}} BCI LAB</h1>
+            
+            <br>
+            <p>Your comment to <b>{{student['student_name']}}</b> which have been submitted</p>
+            <h4>User name</h4>
+            <div>{{comment['user_name']}}</div>
+            <h4>Comment</h4>
+        <div>{{comment['comment_content']}}</div>
+
+        </div>
+        
+
+        {% include 'footer.html' %}   
+    </body>
+</html>

@@ -1,13 +1,13 @@
 
 <div class="border-bottom row" style="margin-bottom: 5px;padding-bottom: 8px;">
     <div class="col-9">
-        <h4 style="color: rgb(120, 120, 120);margin-bottom: 5px;">{{student['name']}}</h4>
-        <div><b>Location:</b>{{student['location']}}</div>
-        {% if 'title' in student %}
-        <div><b>Title:</b>{{student['title']}}</div>
+        <h4 style="color: rgb(120, 120, 120);margin-bottom: 5px;">{{student['student_name']}}</h4>
+        <div><b>Location:</b>{{student['student_location']}}</div>
+        {% if 'student_title' in student %}
+        <div><b>Title:</b>{{student['student_title']}}</div>
         {% endif %}
     </div>
     <div class="col-3">
-        <button type="button" class="btn btn-outline-primary">More</button>
+        <a href="/student/{{student['student_id']}}" type="button" class="btn btn-outline-primary">More</a>
     </div>
 </div>

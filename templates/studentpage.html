@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'bootstrap.html' %}
+        <title>{{student.student_name}} - {{student.student_title}}</title>
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        {% include 'banner.html' %}
+        <div class="container">
+            <h1 class="text-center mt-4 mb-4">{{school}} BCI LAB</h1>
+            
+            <br>
+            
+            <h3>Name</h3>
+            <p>{{student.student_name}}</p>
+            <h3>Sex</h3>
+            <p>{{student.student_sex}}</p>
+            <h3>Title</h3>
+            <p>{{student.student_title}}</p>
+            <h3>Location</h3>
+            <p>{{student.student_location}}</p>
+            {% if student.student_introduction != none %}
+                <h3>Introduction</h3>
+                <ul>
+                    {% for line in student.student_introduction.split("\n") %}
+                        <li>{{line}}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% if student.student_ability != none %}
+                <h3>Ability</h3>
+                <ol>
+                    {% for line in student.student_ability.split("\n") %}
+                        <li>{{line}}</li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+            {% include 'comment_form.html' %}
+        </div>
+        {% include 'footer.html' %}    
+    </body>
+    
+</html>
